@@ -7,6 +7,12 @@ const client = new commando.Client({
 client.on('ready', () => {
 
     console.log('I am ready master!'); //how you know it is on
+	 client.user.setPresence({
+        game: {
+            name: 'Making a Orc Cleric',
+            type: 0
+        }
+    });
 });
 
 
