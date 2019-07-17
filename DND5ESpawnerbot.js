@@ -1,13 +1,13 @@
 const commando = require('discord.js-commando');
 const Config = require('./config/Config.json');
 const client = new commando.Client({
-	owner: '169868696427167744'
+    owner: '169868696427167744'
 });
 
 client.on('ready', () => {
 
     console.log('I am ready master!'); //how you know it is on
-	 client.user.setPresence({
+    client.user.setPresence({
         game: {
             name: 'Making a Orc Cleric',
             type: 0
@@ -17,15 +17,15 @@ client.on('ready', () => {
 
 
 client.on("guildCreate", guild => {
-  // This event triggers when the bot joins a guild.
-  console.log(`New guild joined: ${guild.name} (id: ${guild.id}). This guild has ${guild.memberCount} members!`);
- 
+    // This event triggers when the bot joins a guild.
+    console.log(`New guild joined: ${guild.name} (id: ${guild.id}). This guild has ${guild.memberCount} members!`);
+
 });
 
 client.on("guildDelete", guild => {
-  // this event triggers when the bot is removed from a guild.
-  console.log(`I have been removed from: ${guild.name} (id: ${guild.id})`);
-  
+    // this event triggers when the bot is removed from a guild.
+    console.log(`I have been removed from: ${guild.name} (id: ${guild.id})`);
+
 });
 
 client.registry.registerGroup('character', 'Spawn');
